@@ -1,0 +1,110 @@
+@font-face {
+    font-family:bladerunner;
+    src: url(BLADRMF_.TTF);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url(Circuit\ Primary\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+h1, h2{
+    background-size: 400% 400%;
+    background-image: linear-gradient( 45deg,white, gray, white, gray, white, gray, white, gray);
+    background-clip: text;
+    color: transparent;
+    font-size: 500%;
+    font-family: bladerunner;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    animation: brilho 3s infinite linear;
+}
+h2{
+    font-size: 400%;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-90%, -15%);
+}
+@keyframes brilho {
+    0%{background-position: right bottom;
+}
+
+    100%{
+       background-position: top left;
+    }
+}
+nav{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100vw;
+    background-image: linear-gradient(90deg,rgba(0, 255, 255, 0.5), rgba(255, 0, 255, 0.548), rgba(0, 0, 255, 0.479));
+}
+iframe{
+    display: inline-block;
+    width: calc(50vw - 10%);
+    height: 300px;
+}
+#lista{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.botao{
+    border-radius: 40px;
+    cursor: pointer;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.541);
+    border: 2px solid rgb(234, 0, 255);
+    width: 600px;
+    height: 100px;
+    margin-top: 20px;
+}
+.nomedobotao{
+    font-family: bladerunner;
+    font-size: 300%;
+    text-decoration: none;
+    color: white;
+}
+.botao:hover{
+    animation: transformar 0.5s  forwards ease-in-out;
+}
+@keyframes transformar {
+    
+    0%{
+        background-color: rgba(0, 0, 0, 0.452);
+        transform: scale(1);
+    }
+    100%{
+        background-color: black;
+        transform: scale(1.1);
+    }
+}
+.botao:hover .nomedobotao{
+      background-size: 300% 300%;
+    background-image: linear-gradient(45deg, rgb(174, 0, 255), rgb(0, 255, 255), rgb(0, 38, 255), rgb(212, 0, 255), rgb(174, 0, 255), rgb(0, 255, 255), rgb(0, 38, 255), rgb(212, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradiente 5s infinite linear alternate-reverse;
+}
+@keyframes gradiente {
+    0%{
+        background-position: right bottom;
+}
+100%{
+       background-position: top left;
+    }
+}
