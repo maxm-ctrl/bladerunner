@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tickets.css">
+    <title>Tickets</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="index.html" class="logo">bladerunner</a></h1>
+
+        <nav class="menu">
+            <div id="container-btn">
+            <a href="sinopsis.html"><button class="botoes"><h1 class="nomebtn">Sinopsis</h1></button></a>
+            <a href="tickets.html"><button class="botoes"><h1 class="nomebtn">Tickets</h1></button></a>
+            <a href="contato.html"><button class="botoes"><h1 class="nomebtn">contato</h1></button></a>
+            </div>    
+        </nav>
+    </header>
+    <section>
+        <table border="0" id="tabela">
+        <thead>
+            <tr>
+                <th class="cabeca">Cidades</th><th class="cabeca">Quantidade de Tickets</th><th class="cabeca">Disponibilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ruy Barbosa</td>
+                <td>0</td>
+                <td>indisponível</td>
+            </tr>
+            <tr>
+                <td>Barcelona</td><td>67</td><td>Disponível</td>
+            </tr>
+            <tr>
+                <td>São Paulo do Potengi</td><td>100</td><td>disponível</td>
+            </tr>
+        </tbody>
+        </table>
+        <form action="#" method="post" class="formulario">
+
+    <legend class="titulo">Tickets</legend>
+
+<div class="item-form">
+    <label for="nome">Nome do Comprador</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+</div>
+
+<br>
+
+<div class="item-form">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+</div>
+
+<br>
+
+<div class="item-form">
+    <label for="quantidade">Quantidade de Tickets</label>
+    <input type="number" id="quantidade" name="quantidade" min="1" max="10" placeholder="Ex: 2" required>
+</div>
+
+<br>
+
+<div class="item-form">
+    <label for="pagamento">Forma de Pagamento</label>
+    <select id="pagamento" name="pagamento" required>
+        <option value="pix">PIX</option>
+        <option value="cartao">Cartão</option>
+        <option value="dinheiro">Dinheiro</option>
+    </select>
+</div>
+<div class="item-form">
+<label for="selecao">Local de Exibição</label>
+    <select id="selecao" name="selecao" required>
+        <option value="Spp">São Paulo do Potengi</option>
+        <option value="Rbb">Ruy Barbosa (indisponível)</option>
+        <option value="Bc">Barcelona</option>
+    </select>
+</div>
+<br>
+
+<div class="item-form">
+    <button type="submit" id="enviar">Comprar Ticket</button>
+</div>
+
+
+</form>
+
+    </section>
+</body>
+</html>
